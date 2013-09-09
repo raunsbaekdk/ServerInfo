@@ -74,7 +74,7 @@ class ServerInfo
 		// Overview
 		$info['servername'] = $_SERVER['SERVER_NAME'];
 		$info['serverport'] = $_SERVER['SERVER_PORT'];
-		$info['date'] = date('d/m-Y H:i:s');
+		$info['date'] = date('d/m-Y H:i');
 		$info['author'] = '<a href="http://URL">DIT NAVN</a>';
 
 
@@ -119,46 +119,46 @@ $info = ServerInfo::info();
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet" />
 	<style type="text/css">body{background:#e7e7e7;padding:35px}@media(min-width:0) and (max-width:992px){body{padding:10px}}.container{max-width:900px;background:#fff;padding-left:25px;padding-right:25px;border:1px solid #ccc}.container>hr{margin:20px 0}</style>
 </head>
-<body>
-	<div class="container">
-		<hr />
-		<div class="row">
-			<div class="col-sm-6">
-				<h4>Klient IP</h4>
-				<p><?php echo $info['ip']; ?></p>
+	<body>
+		<div class="container">
+			<hr />
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Klient IP</h4>
+					<p><?php echo $info['ip']; ?></p>
+				</div>
+				<div class="col-sm-6">
+					<h4>Klient browser</h4>
+					<p><?php echo $info['ua']; ?></p>
+				</div>
 			</div>
-			<div class="col-sm-6">
-				<h4>Klient browser</h4>
-				<p><?php echo $info['ua']; ?></p>
+			<br />
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Sidst genstartet</h4>
+					<p><?php echo $info['uptime']['days'] . ' dag(e)' . ', ' . $info['uptime']['hours'] . ' time(r)' . ', ' . $info['uptime']['minutes'] . ' minut(ter)' . ', ' . $info['uptime']['seconds'] . ' sekund(er)'; ?></p>
+				</div>
+				<div class="col-sm-6">
+					<h4>Brugere logget ind</h4>
+					<p><?php echo $info['users']; ?></p>
+				</div>
 			</div>
+			<br />
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Load</h4>
+					<p><?php echo $info['load']; ?></p>
+				</div>
+				<div class="col-sm-6">
+					<h4>Hukommelsesforbrug</h4>
+					<p><?php echo $info['ram']['percent'] . '% brugt - Fri ' . $info['ram']['free'] . ', brugt ' . $info['ram']['used'] . ', total ' . $info['ram']['total']; ?></p>
+				</div>
+			</div>
+			<hr />
+			<div class="footer">
+				<p>&copy; 2013 Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
+			</div>
+			<hr />
 		</div>
-		<br />
-		<div class="row">
-			<div class="col-sm-6">
-				<h4>Sidst genstartet</h4>
-				<p><?php echo $info['uptime']['days'] . ' dag(e)' . ', ' . $info['uptime']['hours'] . ' time(r)' . ', ' . $info['uptime']['minutes'] . ' minut(ter)' . ', ' . $info['uptime']['seconds'] . ' sekund(er)'; ?></p>
-			</div>
-			<div class="col-sm-6">
-				<h4>Brugere logget ind</h4>
-				<p><?php echo $info['users']; ?></p>
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-sm-6">
-				<h4>Load</h4>
-				<p><?php echo $info['load']; ?></p>
-			</div>
-			<div class="col-sm-6">
-				<h4>Hukommelsesforbrug</h4>
-				<p><?php echo $info['ram']['percent'] . '% brugt - Fri ' . $info['ram']['free'] . ', brugt ' . $info['ram']['used'] . ', total ' . $info['ram']['total']; ?></p>
-			</div>
-		</div>
-		<hr />
-		<div class="footer">
-			<p>&copy; 2013 Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
-		</div>
-		<hr />
-	</div>
-</body>
+	</body>
 </html>
