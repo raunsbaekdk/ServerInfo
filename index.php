@@ -117,7 +117,7 @@ $info = ServerInfo::info();
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
-	<style type="text/css">body{background:#e7e7e7;padding:35px}@media(min-width:0) and (max-width:992px){body{padding:10px}}.container{max-width:900px;background:#fff;padding-left:25px;padding-right:25px;border:1px solid #ccc}.container>hr{margin:20px 0}</style>
+	<style type="text/css">body{background:#e7e7e7;padding:35px}@media(min-width:0) and (max-width:992px){body{padding:0px}}.container{max-width:860px;background:#fff;padding-left:20px;padding-right:20px;border:1px solid #ccc}.container>hr{margin:15px 0}</style>
 </head>
 	<body>
 		<div class="container">
@@ -154,7 +154,7 @@ $info = ServerInfo::info();
 					<p><?php echo $info['ram']['percent'] . '% brugt - Fri ' . $info['ram']['free'] . ', brugt ' . $info['ram']['used'] . ', total ' . $info['ram']['total']; ?></p>
 				</div>
 			</div>
-			<br />
+			<hr />
 			<div class="footer">
 				<p>&copy; 2013 Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
 			</div>
