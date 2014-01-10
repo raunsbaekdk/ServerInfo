@@ -156,7 +156,7 @@ $info = ServerInfo::info();
 			</div>
 			<hr />
 			<div class="footer">
-				<p>&copy; 2013 Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
+				<p>&copy; <?php echo date('Y'); ?> Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
 			</div>
 			<hr />
 		</div>
