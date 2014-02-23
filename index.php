@@ -75,7 +75,6 @@ class ServerInfo
 		$info['servername'] = $_SERVER['SERVER_NAME'];
 		$info['serverport'] = $_SERVER['SERVER_PORT'];
 		$info['date'] = date('d/m-Y H:i');
-		$info['author'] = '<a href="http://raunsbaek.dk">Mike Raunsbæk</a>';
 
 
 		// Restart
@@ -156,7 +155,7 @@ $info = ServerInfo::info();
 			</div>
 			<hr />
 			<div class="footer">
-				<p>&copy; <?php echo date('Y'); ?> Server - <?php echo $info['date']; ?> - <?php echo $info['author']; ?></p>
+				<p>&copy; <?php echo date('Y'); ?> Server - <?php echo $info['date']; ?></p>
 			</div>
 			<hr />
 		</div>
